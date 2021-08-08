@@ -1,21 +1,20 @@
 
 import { createStore, combineReducers} from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+/* import actionTypes from "./types"; */
 import actionTypes from "./types"
 
 
 const itemReducer = (state = [], { type, payload }) => {
-     
     switch (type) {
-      
-    case actionTypes.ADD:
+    case actionTypes.ADD_PHONE:
        
-        return state.items.push(payload);
-        /* [...state.items, payload]; */
+      /*   return state.items.push(payload); */
+        [...state, payload];
            
         
-      case actionTypes.DELETE: 
-            return state.items.filter(({id}) => id !== payload);
+      case actionTypes.DELETE_PHONE: 
+            return state.filter(cont =>cont.id !== payload);
          
     default:
       return state;
@@ -28,7 +27,7 @@ const filterReducer = (state = "", { type, payload }) => {
      
     switch (type) {
       
-    case actionTypes.FILTER:
+    case actionTypes.FILTER_PHONE:
       return state.filter(payload.toLowerCase());
          
     default:

@@ -1,11 +1,12 @@
 import shortid from 'shortid';
+/* import {ADD_PHONE, DELETE_PHONE, FILTER_PHONE} from "./types" */
+import { createAction } from '@reduxjs/toolkit';
 import actionTypes from "./types"
-import { createAction} from '@reduxjs/toolkit'
 
 
      
-   const addContact = (  name, number  ) => ({
-   type: actionTypes.ADD,
+  export  const addContact = (  {name, number}  ) => ({
+   type: actionTypes.ADD_PHONE,
      payload:
      {
       id: shortid.generate(),
@@ -15,17 +16,16 @@ import { createAction} from '@reduxjs/toolkit'
   })  
 
 
- const deleteContact = contactId => ({
-
-     type:  actionTypes.DELETE,
+ export const deleteContact = (contactId) => ({
+     type:  actionTypes.DELETE_PHONE,
     payload: contactId,      
 })
      
 
- const changeFilter = value => 
+ export const changeFilter = value => 
 ({
-    type: actionTypes.FILTER,
+    type: actionTypes.FILTER_PHONE,
     payload: value,
 })
        
-export default {addContact, deleteContact, changeFilter}
+/*  export default {addContact, deleteContact, changeFilter} */

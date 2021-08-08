@@ -1,5 +1,5 @@
- const ADD = 'photo/addContact';
- const DELETE = 'photo/deleteContact';
-const FILTER = 'photo/changeFilter';
- 
- export default {ADD, DELETE, FILTER}
+export default {
+     ADD_PHONE : "ADD_PHONE",
+ DELETE_PHONE : "DELETE_PHONE",
+ FILTER_PHONE : "FILTER_PHONE",
+ }

@@ -7,12 +7,12 @@ import ContactList from '../ContactLIst/ContactList';
 import Filter from '../Filter/Filter';
 import s from './Phonebook.module.css';
 import { connect } from 'react-redux';
-import * as actions from '../../redux/actions';
+import {addContact} from '../../redux/actions';
 
 
 
 
- function Phonebook({contacts, filter, items, addContact, deleteContact, changeFilter}) {
+ function Phonebook({/* contacts, filter, */ items, addContact}) {
 
 
 /* 
@@ -27,14 +27,16 @@ import * as actions from '../../redux/actions';
    
 
 
-const handleSubmit = ({ name, number }) => {
+/* const handleSubmit = ({ name, number }) => {
      items.find(item =>
        item.name.toLowerCase().includes(name.toLowerCase())
          ? alert(`${item.name}  already exist`)
          :addContact(name, number)
        
-      )};
+      )}; */
 
+   
+   
    
 
  /*  const addContact = ( name, number ) => {
@@ -54,8 +56,6 @@ const handleSubmit = ({ name, number }) => {
     )
 }
      
-     
-    
    const changeFilter = filter => setFilter(filter.toLowerCase()); */
  
 /*  const  visibleContacts = () => {
@@ -66,7 +66,7 @@ const handleSubmit = ({ name, number }) => {
     return (
         <div className={s.section}>
             <h1 className={s.title}>Phonebook</h1>
-            <ContactForm onSubmit={ handleSubmit}/>
+            <ContactForm /* onSubmit={ handleSubmit} *//>
 
             <h2 className={s.title_contact}>Contacts</h2>
         <Filter /* className={s.filter_label}
@@ -81,7 +81,7 @@ const handleSubmit = ({ name, number }) => {
     );
 }
 
-
+/* 
 const mapStateToProps = state => {
   return {
     filter: state.contacts.filter,
@@ -92,12 +92,13 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addContact: (items) => dispatch(actions.addContact(items)),
-    deleteContact: (items) => dispatch(actions.deleteContact(items)),
-    changeFilter: () => dispatch(actions.changeFilter),
+    addContact: ({ name, number }) => dispatch(addContact({ name, number })),
+  
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Phonebook)
 
-/* export default Phonebook */
+ */
+
+export default Phonebook
