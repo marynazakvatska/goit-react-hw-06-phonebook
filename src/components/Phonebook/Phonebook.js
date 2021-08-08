@@ -12,10 +12,10 @@ import {addContact} from '../../redux/actions';
 
 
 
- function Phonebook({/* contacts, filter, */ items, addContact}) {
+ function Phonebook({/* contacts, filter, */ contacts, addContact}) {
 
 
-/* 
+
    const handleSubmit = ({ name, number }) => {
      contacts.find(contact =>
        contact.name.toLowerCase().includes(name.toLowerCase())
@@ -23,18 +23,7 @@ import {addContact} from '../../redux/actions';
          :addContact(name, number)
        
      )
-   }; */
-   
-
-
-/* const handleSubmit = ({ name, number }) => {
-     items.find(item =>
-       item.name.toLowerCase().includes(name.toLowerCase())
-         ? alert(`${item.name}  already exist`)
-         :addContact(name, number)
-       
-      )}; */
-
+   };
    
    
    
