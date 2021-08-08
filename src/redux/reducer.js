@@ -2,7 +2,7 @@ import actionTypes from "./types";
 import { combineReducers } from "redux";
 
 
-const itemReducer = (state = [], { type, payload }) => {
+const items = (state = [], { type, payload }) => {
     switch (type) {
     case actionTypes.ADD_PHONE:
         [...state, payload];
@@ -17,7 +17,7 @@ const itemReducer = (state = [], { type, payload }) => {
 }
 
 
-const filterReducer = (state = "", { type, payload }) => {
+const filter = (state = "", { type, payload }) => {
      
     switch (type) {
       
@@ -31,7 +31,7 @@ const filterReducer = (state = "", { type, payload }) => {
 
 
 export default combineReducers({
-    itemReducer,
-    filterReducer,
+    items,
+    filter,
 })
 
