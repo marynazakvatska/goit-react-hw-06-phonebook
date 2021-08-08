@@ -17,7 +17,6 @@ const itemReducer = (state = [], { type, payload }) => {
 }
 
 
-
 const filterReducer = (state = "", { type, payload }) => {
      
     switch (type) {

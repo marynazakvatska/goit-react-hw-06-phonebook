@@ -91,6 +91,6 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: contact => dispatch(addContact(contact))  
 })
 
-export default connect => (null, mapDispatchToProps)(SignupForm)
+export default connect(null, mapDispatchToProps)(SignupForm)
 
 

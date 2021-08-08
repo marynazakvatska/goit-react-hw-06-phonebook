@@ -20,9 +20,10 @@ const mapDispatchToProps = dispatch => ({
   onChange: (e) => dispatch(changeFilter(e.target.value))
 })
 
-Filter.propTypes = {
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filter)
+
+/* Filter.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-};
-
-export default connect (mapStateToProps, mapDispatchToProps)(Filter)
+}; */
