@@ -41,7 +41,8 @@ const ContactList = ({ contacts, onDeleteContact }) => {
 const getVisibleContacts = (allContacts, filter) => {
   
   const normalizedFilter = filter.toLowerCase();
-  return allContacts.filter(({ contact }) =>
+  return allContacts.filter(contact =>
+    
     contact.name.toLowerCase().includes(normalizedFilter)
   );
  }
@@ -50,7 +51,6 @@ const getVisibleContacts = (allContacts, filter) => {
 const mapStateToProps = ({contacts: {items, filter}}) => ({
   contacts: getVisibleContacts(items, filter)
 })
-
 
 
 
