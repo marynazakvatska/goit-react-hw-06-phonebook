@@ -5,7 +5,7 @@ import { combineReducers } from "redux";
 const items = (state = [], { type, payload }) => {
     switch (type) {
     case actionTypes.ADD_PHONE:
-        [...state, payload];
+     return   [...state, payload];
            
         
       case actionTypes.DELETE_PHONE: 
