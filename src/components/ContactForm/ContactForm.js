@@ -85,7 +85,6 @@ value={name}
  )
 }
 
-// const mapStateToProps = state => ({value: state.contacts.items})
 
 const mapDispatchToProps = dispatch => ({
   onSubmit: contact => dispatch(addContact(contact))  

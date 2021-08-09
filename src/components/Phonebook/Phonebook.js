@@ -16,7 +16,7 @@ import {addContact} from '../../redux/actions';
 
 
 
-   const handleSubmit = ({ name, number }) => {
+/*    const handleSubmit = ({ name, number }) => {
      contacts.find(contact =>
        contact.name.toLowerCase().includes(name.toLowerCase())
          ? alert(`${contact.name}  already exist`)
@@ -25,33 +25,8 @@ import {addContact} from '../../redux/actions';
      )
    };
    
+    */
    
-   
-
- /*  const addContact = ( name, number ) => {
-    
-    const contact = {
-      id: shortid.generate(),
-      name,
-      number,
-    }
-    console.log(contact)
-    setContacts(contacts=>[contact, ...contacts])
-  }
-     
-     
-   const deleteContact = contactId => {
-        setContacts(contacts.filter(contact => contact.id !== contactId)
-    )
-}
-     
-   const changeFilter = filter => setFilter(filter.toLowerCase()); */
- 
-/*  const  visibleContacts = () => {
-        return contacts.filter(contact => contact.name.toLowerCase().includes(filter));
- }
-   */
-
     return (
         <div className={s.section}>
             <h1 className={s.title}>Phonebook</h1>

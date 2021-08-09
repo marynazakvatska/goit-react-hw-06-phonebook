@@ -1,7 +1,6 @@
 
 import { createStore, combineReducers} from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-/* import actionTypes from "./types"; */
 import phoneReducer from './reducer';
 
 
