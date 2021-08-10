@@ -1,13 +1,14 @@
 import {useState} from 'react';
 import s from './ContactForm.module.css';
 import shortid from 'shortid';
-import { connect } from 'react-redux';
-/* import contactsActions from '../../redux/actions'; */
-import {addContact} from '../../redux/actions'
+import { useDispatch } from 'react-redux';
+import actions from '../../redux/actions';
 
 
 
-const SignupForm = ({onSubmit}) => {
+
+ const SignupForm = () => {
+  const dispatch = useDispatch();
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -19,8 +20,9 @@ const SignupForm = ({onSubmit}) => {
 
 
 const  handleSubmit = e => {
-    e.preventDefault();
-    onSubmit({name, number})
+  e.preventDefault();
+  dispatch(actions.addContact({name, number}))
+   /*  onSubmit({name, number}) */
     
 reset();
     }
@@ -85,11 +87,12 @@ value={name}
  )
 }
 
+export default SignupForm;
 
-const mapDispatchToProps = dispatch => ({
+/* const mapDispatchToProps = dispatch => ({
   onSubmit: contact => dispatch(addContact(contact))  
 })
 
 export default connect(null, mapDispatchToProps)(SignupForm)
-
+ */
 
