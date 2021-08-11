@@ -3,13 +3,7 @@ import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import phoneReducer from './reducer';
 import {
-  persistStore, persistReducer,
-FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,} from 'redux-persist'
+  persistStore, persistReducer} from 'redux-persist'
 import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
 
 
