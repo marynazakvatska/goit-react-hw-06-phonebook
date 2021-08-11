@@ -2,7 +2,6 @@
   "name": "mz-photo-netlify",
   "version": "0.1.0",
   "private": true,
- 
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -16,6 +15,7 @@
     "react-scripts": "4.0.3",
     "react-toastify": "^7.0.4",
     "redux": "^4.1.0",
+    "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "shortid": "^2.2.16",
     "web-vitals": "^1.1.2"
