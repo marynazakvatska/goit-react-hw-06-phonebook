@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 const addContact = (state, { payload }) => {
     if (state.find(contact => contact.name.toLowerCase() === payload.name)) {
 
-        toast.error(` '${payload.number}' is already in your list`);
+        toast.error(` '${payload.name}' is already in your list`);
         return state;
     }
   
